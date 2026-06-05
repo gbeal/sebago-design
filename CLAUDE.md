@@ -27,7 +27,7 @@ All colors must derive from this Maine-summer palette. Do not introduce colors o
 | `sky` | Hazy summer sky blue, secondary accent | `#7BAFD4` |
 | `lake` | Sebago Lake blue-green, primary interactive/action | `#2C6E8A` |
 | `lake-light` | Lighter lake, hover/active states | `#3D8FAD` |
-| `sun` | Deep orange-amber — the sun itself, low on the horizon | `#D96B2A` |
+| `sun` | Warm gold — hazy Maine sunset, last light above the horizon | `#E09040` |
 | `pool` | Cool aqua (swimming pool), secondary action | `#4DB8C8` |
 | `linen` | Warm creamy white, primary background | `#FDFBF7` |
 | `pop-red` | Bomb pop red, used sparingly as a festive accent | `#E83A4A` |

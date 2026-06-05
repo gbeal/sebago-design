@@ -12,8 +12,8 @@ const swatches = [
   ['lake',         '#2C6E8A'],
   ['lake-light',   '#3D8FAD'],
   ['pool',         '#4DB8C8'],
-  ['sun',          '#D96B2A'],
-  ['sun-light',    '#E88C52'],
+  ['sun',          '#E09040'],
+  ['sun-light',    '#EDB068'],
   ['pop-red',      '#E83A4A'],
 ];
 
