@@ -1,0 +1,106 @@
+:root {
+  /* ── Colors ─────────────────────────────────────────────── */
+
+  /* Greens */
+  --color-linen:        #FDFBF7;
+  --color-fern:         #6B8C75;
+  --color-meadow:       #4C8B5A;
+  --color-meadow-light: #5EA36C;
+  --color-canopy:       #2A5438;
+  --color-white:        #ffffff;
+
+  /* Blues */
+  --color-sky:          #7BAFD4;
+  --color-lake:         #2C6E8A;
+  --color-lake-light:   #3D8FAD;
+  --color-pool:         #4DB8C8;
+
+  /* Warmth */
+  --color-sun:          #E8B84B;
+  --color-sun-light:    #F0CC72;
+
+  /* Festive accent */
+  --color-pop-red:      #E83A4A;
+
+  /* Semantic aliases */
+  --color-bg:           var(--color-linen);
+  --color-surface:      var(--color-white);
+  --color-border:       rgba(76, 139, 90, 0.28); /* meadow @ 28% */
+  --color-text:         var(--color-canopy);
+  --color-text-muted:   var(--color-fern);
+  --color-action:       var(--color-lake);
+  --color-action-hover: var(--color-lake-light);
+  --color-action-alt:   var(--color-meadow);
+
+  /* ── Typography ─────────────────────────────────────────── */
+
+  --font-display:  'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-body:     'Nunito', 'DM Sans', system-ui, sans-serif;
+  --font-mono:     'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+  --font-weight-black:   800;
+
+  /* Type scale (8px base grid) */
+  --text-xs:   0.75rem;   /* 12px */
+  --text-sm:   0.875rem;  /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg:   1.125rem;  /* 18px */
+  --text-xl:   1.25rem;   /* 20px */
+  --text-2xl:  1.5rem;    /* 24px */
+  --text-3xl:  1.875rem;  /* 30px */
+  --text-4xl:  2.25rem;   /* 36px */
+  --text-5xl:  3rem;      /* 48px */
+  --text-6xl:  3.75rem;   /* 60px */
+
+  --leading-tight:  1.15;
+  --leading-snug:   1.3;
+  --leading-normal: 1.6;
+
+  /* ── Spacing (8px grid) ─────────────────────────────────── */
+
+  --space-1:  0.25rem;  /* 4px  */
+  --space-2:  0.5rem;   /* 8px  */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* ── Layout ─────────────────────────────────────────────── */
+
+  --width-content:  720px;
+  --width-wide:     1280px;
+  --gutter-mobile:  var(--space-4);
+  --gutter-desktop: var(--space-6);
+
+  /* ── Borders & Radius ───────────────────────────────────── */
+
+  --border-width:    1px;
+  --border-width-lg: 2px;
+  --radius-sm:       4px;
+  --radius-md:       8px;
+  --radius-lg:       12px;
+  --radius-xl:       20px;
+
+  /* ── Shadows ────────────────────────────────────────────── */
+
+  --shadow-sm: 0 1px 4px rgba(42, 84, 56, 0.10);
+  --shadow-md: 0 4px 14px rgba(42, 84, 56, 0.13);
+  --shadow-lg: 0 8px 28px rgba(42, 84, 56, 0.16);
+
+  /* ── Motion ─────────────────────────────────────────────── */
+
+  --duration-fast: 100ms;
+  --duration-base: 200ms;
+  --duration-slow: 350ms;
+  --ease-default:  cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+}
