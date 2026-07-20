@@ -22,6 +22,11 @@
   /* Festive accent */
   --color-pop-red:      #E83A4A;
 
+  /* Dark theme surfaces — canopy-tinted, not neutral gray */
+  --color-dusk:         #101D13;
+  --color-dusk-light:   #1A2D1F;
+  --color-fern-light:   #7B9A85;
+
   /* Semantic aliases */
   --color-bg:           var(--color-linen);
   --color-surface:      var(--color-white);
@@ -103,4 +108,42 @@
   --duration-slow: 350ms;
   --ease-default:  cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* ── Dark theme ───────────────────────────────────────────────
+   Raw brand hues stay fixed; only semantic aliases are remapped.
+   Lake fails contrast on dark surfaces, so dark mode promotes each
+   action color to its -light sibling. Applies automatically via
+   prefers-color-scheme, overridable with [data-theme] on <html>. */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg:           var(--color-dusk);
+    --color-surface:      var(--color-dusk-light);
+    --color-border:       rgba(94, 163, 108, 0.32); /* meadow-light @ 32% */
+    --color-text:         var(--color-linen);
+    --color-text-muted:   var(--color-fern-light);
+    --color-action:       var(--color-lake-light);
+    --color-action-hover: var(--color-pool);
+    --color-action-alt:   var(--color-meadow-light);
+
+    --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.55);
+  }
+}
+
+[data-theme="dark"] {
+  --color-bg:           var(--color-dusk);
+  --color-surface:      var(--color-dusk-light);
+  --color-border:       rgba(94, 163, 108, 0.32); /* meadow-light @ 32% */
+  --color-text:         var(--color-linen);
+  --color-text-muted:   var(--color-fern-light);
+  --color-action:       var(--color-lake-light);
+  --color-action-hover: var(--color-pool);
+  --color-action-alt:   var(--color-meadow-light);
+
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.55);
 }

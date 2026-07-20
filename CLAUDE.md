@@ -23,25 +23,46 @@ All colors must derive from this Maine-summer palette. Do not introduce colors o
 | Token | Description | Example Hex |
 |---|---|---|
 | `meadow` | Rich mid-green grass in full sun — primary surface accent | `#4C8B5A` |
+| `meadow-light` | Lighter meadow, dark-mode secondary action | `#5EA36C` |
+| `fern` | Muted sage green, secondary text | `#6B8C75` |
+| `fern-light` | Lighter fern, dark-mode secondary text | `#7B9A85` |
 | `canopy` | Deep broad-leaf green, bold text and dark surfaces | `#2A5438` |
 | `sky` | Hazy summer sky blue, secondary accent | `#7BAFD4` |
 | `lake` | Sebago Lake blue-green, primary interactive/action | `#2C6E8A` |
-| `lake-light` | Lighter lake, hover/active states | `#3D8FAD` |
+| `lake-light` | Lighter lake, hover/active states, dark-mode primary action | `#3D8FAD` |
 | `sun` | Warm gold — hazy Maine sunset, last light above the horizon | `#E09040` |
-| `pool` | Cool aqua (swimming pool), secondary action | `#4DB8C8` |
-| `linen` | Warm creamy white, primary background | `#FDFBF7` |
+| `sun-light` | Lighter sun, warmth on dark surfaces | `#EDB068` |
+| `pool` | Cool aqua (swimming pool), secondary action, dark-mode action hover | `#4DB8C8` |
+| `linen` | Warm creamy white, primary background, dark-mode text | `#FDFBF7` |
 | `pop-red` | Bomb pop red, used sparingly as a festive accent | `#E83A4A` |
+| `dusk` | Canopy-tinted near-black — "the woods after dark," dark-mode background | `#101D13` |
+| `dusk-light` | Lighter dusk, dark-mode surface (card, panel) | `#1A2D1F` |
 
-**Semantic mappings:**
+**Semantic mappings (light):**
 - Background: `linen`
 - Surface (card, panel): `white` or `linen`
 - Border: `meadow` at 25–35% opacity
 - Primary text: `canopy`
-- Secondary text: `meadow`
+- Secondary text: `fern`
 - Primary action: `lake`
 - Secondary action: `pool`
 - Highlight/warmth: `sun`
 - Accent (use sparingly): `pop-red`
+
+**Semantic mappings (dark):**
+Dark mode is not a neutral-gray inversion — surfaces are `canopy`-tinted so the dark theme still reads as warm and alive, never cold or industrial. Raw brand hues stay fixed; only semantic aliases remap, and each action color promotes to its `-light` sibling (plain `lake` fails contrast on dark surfaces).
+- Background: `dusk`
+- Surface (card, panel): `dusk-light`
+- Border: `meadow-light` at 30–35% opacity
+- Primary text: `linen`
+- Secondary text: `fern-light`
+- Primary action: `lake-light`
+- Action hover: `pool`
+- Secondary action: `meadow-light`
+- Highlight/warmth: `sun` (unchanged — glows warmer against dark)
+- Accent (use sparingly): `pop-red` (unchanged)
+
+Implemented via `[data-theme="dark"]` on `<html>`, with a `prefers-color-scheme: dark` fallback for automatic detection. See `src/tokens/tokens.css`.
 
 ## Typography
 

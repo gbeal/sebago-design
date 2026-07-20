@@ -10,6 +10,7 @@ const preview = {
         { name: 'linen',  value: '#FDFBF7' },
         { name: 'white',  value: '#ffffff' },
         { name: 'canopy', value: '#2A5438' },
+        { name: 'dusk',   value: '#101D13' },
       ],
     },
     viewport: {
@@ -20,6 +21,29 @@ const preview = {
       },
     },
   },
+  initialGlobals: {
+    theme: 'light',
+  },
+  globalTypes: {
+    theme: {
+      description: 'Theme',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', icon: 'sun', title: 'Light' },
+          { value: 'dark', icon: 'moon', title: 'Dark' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  decorators: [
+    (story, context) => {
+      document.documentElement.setAttribute('data-theme', context.globals.theme);
+      return story();
+    },
+  ],
 };
 
 export default preview;
